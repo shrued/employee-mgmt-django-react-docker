@@ -1,3 +1,4 @@
 # employee-mgmt-django-react-docker
 
-docker-compose up --build
+```docker-compose exec backend python manage.py migrate```<br>
+```docker-compose up --build```
