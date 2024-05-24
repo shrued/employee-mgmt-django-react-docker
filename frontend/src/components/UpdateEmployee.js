@@ -9,7 +9,7 @@ function UpdateEmployee({ employeeId, currentStatus, onUpdate }) {
   };
 
   return (
-    <select value={selectedStatus} onChange={handleChange}>
+    <select value={selectedStatus} onChange={handleChange} className="ms-2">
       <option value="current">Current</option>
       <option value="former">Former</option>
     </select>

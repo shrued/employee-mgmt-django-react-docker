@@ -84,7 +84,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="m-4">
       <h1>Employee Management System</h1>
       <AddEmployee onAdd={refreshEmployeeList} />
       <ImportCSV onImport={refreshEmployeeList} />

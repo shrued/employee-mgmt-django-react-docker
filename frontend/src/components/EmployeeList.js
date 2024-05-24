@@ -5,10 +5,10 @@ import UpdateEmployee from "./UpdateEmployee";
 function EmployeeList({ employees, onDeleteEmployee, onUpdateEmployee }) {
   return (
     <div>
-      <h1>Employee List</h1>
+      <h2 className="mt-5">Employees</h2>
       <ul>
         {employees.map((employee) => (
-          <li key={employee.id}>
+          <li key={employee.id} className="d-flex mt-2">
             {employee.first_name} {employee.last_name} - {employee.email} -{" "}
             {employee.status}
             <DeleteEmployee

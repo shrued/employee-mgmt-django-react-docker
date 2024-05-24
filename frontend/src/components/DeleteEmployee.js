@@ -1,4 +1,6 @@
 import React from "react";
+import { Button } from "react-bootstrap";
+import { Trash } from "react-bootstrap-icons";
 
 function DeleteEmployee({ employeeId, onDelete }) {
   const handleDelete = (event) => {
@@ -6,8 +8,10 @@ function DeleteEmployee({ employeeId, onDelete }) {
   };
 
   return (
-    <div>
-      <button onClick={handleDelete}>Delete</button>
+    <div className="ms-2">
+      <Button variant="danger" onClick={handleDelete}>
+        <Trash />
+      </Button>
     </div>
   );
 }

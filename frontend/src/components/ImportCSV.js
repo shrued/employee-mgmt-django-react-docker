@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 
 function ImportCSV() {
   const [csvFile, setCsvFile] = useState(null);
@@ -41,11 +42,16 @@ function ImportCSV() {
   };
 
   return (
-    <form onSubmit={handleSubmit} encType="multipart/form-data">
-      <input type="file" accept=".csv" onChange={handleFileChange} />
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <button type="submit">Import CSV</button>
-    </form>
+    <>
+      <h2 className="mt-5">Import Employees</h2>
+      <form onSubmit={handleSubmit} encType="multipart/form-data">
+        <input type="file" accept=".csv" onChange={handleFileChange} />
+        {error && <p style={{ color: "red" }}>{error}</p>}
+        <Button variant="dark" type="submit">
+          Import CSV
+        </Button>
+      </form>
+    </>
   );
 }
 

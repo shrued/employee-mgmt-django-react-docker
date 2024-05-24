@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 
 function EmployeeForm({ onSubmit }) {
   const [firstName, setFirstName] = useState("");
@@ -16,8 +17,8 @@ function EmployeeForm({ onSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <form onSubmit={handleSubmit} className="d-flex flex-column">
+      <label className="mt-2">
         First Name:
         <input
           type="text"
@@ -26,7 +27,7 @@ function EmployeeForm({ onSubmit }) {
           required
         />
       </label>
-      <label>
+      <label className="mt-2">
         Last Name:
         <input
           type="text"
@@ -35,7 +36,7 @@ function EmployeeForm({ onSubmit }) {
           required
         />
       </label>
-      <label>
+      <label className="mt-2">
         Email:
         <input
           type="email"
@@ -44,14 +45,18 @@ function EmployeeForm({ onSubmit }) {
           required
         />
       </label>
-      <label>
+      <label className="mt-2">
         Status:
         <select value={status} onChange={(e) => setStatus(e.target.value)}>
           <option value="current">Current</option>
           <option value="former">Former</option>
         </select>
       </label>
-      <button type="submit">Submit</button>
+      <div className="mt-2">
+        <Button variant="success" type="submit">
+          Add
+        </Button>
+      </div>
     </form>
   );
 }
